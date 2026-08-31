@@ -1,0 +1,27 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+backend/venv/
+
+# Environment variables
+.env
+backend/.env
+
+# IDE/editor files
+.vscode/
+*.swp
+*.swo
+
+# MacOS files
+.DS_Store
+
+# Model artifacts
+backend/model/
+
+#large model
+backend/model/similarity_matrix.pkl
+

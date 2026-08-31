@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMatch - AI Movie Recommendations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">CINEMATCH</div>
+    </nav>
+
+    <header class="hero-banner">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1>Unlimited matches.<br>Driven by AI.</h1>
+            <p>Enter a film you love, and our vector-space machine learning engine will instantly map contextually similar cinematic experiences.</p>
+            
+            <div class="search-container">
+                <input type="text" id="movieInput" placeholder="What movie are you in the mood for?" autocomplete="off">
+                <button id="searchBtn">
+                    <span>Get Started</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div id="loading" class="hidden">
+            <div class="netflix-spinner"></div>
+            <p>Parsing plot metadata vectors...</p>
+        </div>
+
+        <div id="error" class="hidden"></div>
+
+        <section id="resultsSection" class="hidden">
+            <h2 class="section-title">Because you searched that title</h2>
+            <div id="cardsGrid" class="cards-grid"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
